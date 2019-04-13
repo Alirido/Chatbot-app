@@ -1,0 +1,660 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;;
+    margin: 0;
+    background-color: white;
+}
+
+.content {
+	margin: 25px 36px;
+	position: relative;
+	/*border: green 4px solid;*/
+}
+
+.titleHeader {
+    color: #F46B15; /* Custom orange */
+    font-size: 63px;
+    font-weight: bold;
+    /*border: red 4px solid;*/
+}
+
+.titleBook {
+	color: #F46B15; /* Custom orange */
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.center {
+	text-align: center;
+}
+
+.bookImage-size {
+	width: 144px;
+	height: 144px;
+	/*border: red 4px solid;*/
+}
+
+.pp-size { /* Profile Picture Size */
+	width: 162px;
+	height: 162px;
+}
+
+.darkBlue-font {
+	color: #1C3869;
+	font-size: 45px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.inputField {
+	width: 99%;
+	font-size: 18px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 9px;
+	border: grey 2px solid;
+	border-radius: 4px
+}
+
+/* Styling button */
+.btn-1 {
+	float: right;
+	background-color: #02ACF1; /* Biru muda */
+	border: none;
+	color: white;
+	padding: 5px 27px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	cursor: pointer;
+	border-radius: 4px;
+	/*-webkit-transition-duration: 0.4s;  Safari 
+    transition-duration: 0.4s;*/
+}
+
+.btn-1:hover {
+	background-color: #3189D6;
+}
+
+.btn-2 {
+	float: right;
+	background-color: #0095CB; /* Biru muda */
+	border: none;
+	color: white;
+	padding: 5px 27px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 34px;
+	/*margin-top: 12px;*/
+	/*margin-bottom: 5px;*/
+	cursor: pointer;
+	border-radius: 9px;
+}
+
+.btn-2:hover {
+	background-color: #2682BF;
+}
+
+.btn-back {
+	border: #F46B15 2px solid;
+	color: #F46B15;
+	font-size: 34px;
+	text-decoration: none;
+	padding: 4px 36px;
+	background-color: white;
+	border-radius: 9px;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn-back:hover {
+	background-color: #F46B15;
+	color: white;
+}
+
+.custom-grey {
+	color: #636662; /* Custom grey */
+}
+
+.width100 {
+	width: 100%;
+}
+
+#error_msg {
+	display: none; /* Hidden by default */
+	width: 35%;
+	margin: 1em auto;
+	padding: 1em;
+	border: 1px solid #a94442;
+	color: #a94442;
+	background-color: #f2dede;
+	border-radius: 0.5em;
+	text-align: center; 
+
+}
+
+#success_msg {
+	width: 35%;
+	margin: 1em auto;
+	padding: 1em;
+	color: #3c763d;
+	background-color: #dff0d8;
+	border: 1px solid #3c763d;
+	border-radius: 0.5em;
+	text-align: center;
+}
+
+/* -------------------------LOG_REG------------------------- */
+div.log_reg {
+	padding: 0;
+	width: 45%;
+	margin: 15% auto;
+	border-color: #02ACF1;
+	border-width: 1.6em 0.4em;
+	border-style: solid;
+	border-radius: 0.5em;
+	text-align: center;
+	background-image: url("bg_dot4.jpg") ;
+    background-size : cover;
+    background-color: rgba(255, 255, 255, 0.75);
+    background-blend-mode: lighten;
+}
+
+.log_reg table {
+	/*border: 2px solid red;*/
+	width: 100%;
+}
+
+.log_reg tr input, textarea {
+	width: 80%;
+}
+
+.log_reg td {
+	padding: 0.3em;
+	/*border: 1px solid green;*/
+}
+
+.log_reg tr td:first-child {
+	text-align: right;
+	color: #6B6B6B;
+	width: 28%;
+}
+
+.log_reg tr td:nth-child(2) {
+	text-align: left;
+	width: 69%;
+}
+
+.log_reg a {
+	color: black;
+	float: left;
+	padding-left: 1em;
+}
+
+.log_reg i {
+	margin-left: 5%;
+}
+
+.log_reg input[type="submit"] {
+	background-color: white;
+    color: orange;
+    padding: 8px 12px;
+    margin: 8px 8px;
+    border: 2px solid orange;
+    cursor: pointer;
+    border-radius: 12px;
+    font-size : 24px;
+}
+
+/* -------------------------HEADER------------------------- */
+header {
+	background-color: #02ACF1; /* Biru muda */
+	margin: 0px;
+	padding: 0px;
+}
+
+table.header {
+	color: white;
+	width: 100%;
+}
+
+.header i {
+	color: white;
+	font-size: 2.5em;
+}
+
+.header i:hover {
+	color: black;
+}
+
+#left-header {
+	padding-left: 20px;
+	text-align: left;
+	font-size: 30px;
+	width: 47%;
+}
+
+#middle-header {
+	text-align: right;
+	font-size: 20px;
+	font-style: sans-serif;
+	width: 47%;
+	padding-right: 25px;
+	text-decoration: underline;
+}
+
+#right-header {
+	text-align: center;
+	margin: 0px;
+	padding: 0.6em 0.4em;
+	background-color: #F46B15; /* Orange */
+	width: 6%;
+	outline: 2px solid #F46B15; /* Orange */
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #0095CB; /* Biru tua */
+}
+
+.topnav a {
+	float: left;
+	color: white; /* #f2f2f2 */
+	text-align: center;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	width: 33.333%;
+	text-decoration: none;
+	font-size: 25px;
+	font-variant: small-caps;
+}
+
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.topnav a:active {
+	background-color: black;
+	color: white;
+}
+
+/* -------------------------SEARCH RESULT------------------------- */
+
+#foundResult {
+	float: left;
+	font-size: 22px;
+	margin-top: 32px;
+	display: none;
+	/*margin-right: 18px;*/
+}
+
+#searchResult {
+	/*border: green 4px solid;*/
+	width: 100%;
+}
+
+#searchResult td#col1 {
+	/*border: red 4px solid;*/
+	vertical-align: top;
+	width:10%;
+}
+
+#searchResult td#col2 {
+	/*border: red 4px solid;*/
+	vertical-align: top;
+	width:90%;
+}
+
+/* -------------------------BOOK DETAILS------------------------- */
+table.book-details {
+	width: 100%;
+}
+
+#col-1 {
+	width: 90%;
+	vertical-align: top;
+	font-size: 20px;
+}
+
+#col-2 {
+	width: 10%;
+	vertical-align: top;
+}
+
+#col-2 span {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#quantity {
+	margin-left: 9px;
+	font-size: 20px;
+}
+
+#myBtn {
+	margin: 18px 0px;
+}
+
+.star-outer {
+	position: relative;
+	display: inline-block;
+}
+
+.star-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 0;
+}
+
+.star-outer::before {
+	content: "\f005 \f005 \f005 \f005 \f005";
+	font-family: "Font Awesome 5 Free";
+	font-size: 27px;
+	color: yellow;
+}
+
+.star-inner::before {
+	content: "\f005 \f005 \f005 \f005 \f005";
+	font-family: "Font Awesome 5 Free";
+	font-size: 27px;
+	font-weight: 900;
+	color: yellow;
+}
+
+table.usersReview {
+	/*border: green 3px solid;*/
+	width: 100%;
+}
+
+table.usersReview img {
+	width: 80px;
+	height: 80px;
+	/*border: black 1px solid;*/
+	/*padding: 2px;*/
+}
+
+table.usersReview td:first-child {
+	/*border: green 3px solid;*/
+	width: 12%;
+}
+
+table.usersReview td:nth-child(2) {
+	/*border: red 3px solid;*/
+	width: 76%;
+	vertical-align: top;
+}
+
+table.usersReview td:last-child {
+	/*border: yellow 3px solid;*/
+	width: 12%;
+	text-align: center;
+	font-size: 18px;
+	vertical-align: top;
+}
+
+table.usersReview i:first-child{
+	color: yellow;
+	font-size: 45px;
+}
+
+table.usersReview .uname-size {
+	font-size: 27px;
+}
+
+/* -------------------------HISTORY------------------------- */
+#history {
+	/*border: green 4px solid;*/
+	width: 100%;
+}
+
+#history td#c1 {
+	width:10%;
+	vertical-align: top;
+	/*border: red 3px solid;*/
+}
+
+#history td#c2 {
+	width:65%;
+	vertical-align: top;
+	/*border: red 3px solid;*/
+}
+
+#history td#c3 {
+	width:25%;
+	text-align: right;
+	vertical-align: top;
+	/*border: red 3px solid;*/
+}
+
+/* -------------------------REVIEW------------------------- */
+.rating-star {
+	width: 100%;
+	/*border: green 4px solid;*/
+	text-align: center;
+	font-size: 63px;
+}
+
+.rating-star i {
+	color: yellow;
+	cursor: pointer;
+	margin: 18px -6px;
+	/*border: red 3px solid;*/
+}
+
+/* -------------------------PROFILE------------------------- */
+.top_profile {
+	/*text-align: center;*/
+	width: 100%;
+	background-color: #00374C;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	/*position: relative;*/
+}
+
+.top_profile th {
+	color: white;
+	text-align: center;
+	width: 94%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 40px;
+}
+
+.top_profile td {
+	/*position: absolute;*/
+	/*top:15;*/
+	/*right:2em;*/
+	vertical-align: top;
+	text-align: center;
+	width: 6%;
+}
+
+.top_profile i {
+	color: white;
+	font-size: 2.5em;
+}
+
+.top_profile i:hover {
+	color: black;
+}
+
+table.detail_profile {
+	font-size: 24px;
+	margin-left: 40px;
+}
+
+.detail_profile td {
+	padding: 16px;
+}
+
+/* -------------------------EDIT PROFILE------------------------- */
+#editProfile {
+	/*border: green 4px solid;*/
+	width: 100%;
+}
+
+#editProfile input[type=file] {
+	/*border: green 4px solid;*/
+	margin-top: 9px;
+}
+
+#editProfile td.c-1 {
+	width: 20%;
+	vertical-align: top;
+	font-size: 22px;
+	/*color: #636662;  /* Custom grey */
+}
+
+#editProfile td.c-2 {
+	width: 80%;
+}
+
+#editProfile input.width100 {
+	width: 99%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	font-size: 22px;
+}
+
+#editProfile label#cSize {
+	font-size: 22px;
+}
+
+#editProfile textarea {
+	font-size: 22px;
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+/* -------------------------MODAL NOTIFICATION------------------------- */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 300px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 0.5s;
+	animation-name: fadeIn;
+	animation-duration: 0.5s;
+}
+
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding-top: 8px;
+	padding-right: 8px;
+	padding-left: 20px;
+	padding-bottom: 45px;
+	border: 1px solid #888;
+	width: 40%;
+	line-height: 20px;
+	font-size: 18px;
+	/*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);*/
+	-webkit-animation-name: slideFromTop;
+	-webkit-animation-duration: 0.5s;
+	animation-name: slideFromTop;
+	animation-duration: 0.5s;
+}
+
+/* Add Animation*/
+@-webkit-keyframes fadeIn {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+@keyframes fadeIn {
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+@-webkit-keyframes slideFromTop {
+	from {top: -300px; opacity: 0}
+	to {top: 0; opacity: 1}
+}
+
+@keyframes slideFromTop {
+	from {top: -300px; opacity: 0}
+	to {top: 0; opacity: 1}
+}
+		
+/*The close button*/
+.close {
+	float: right;
+	text-decoration: none;
+	font-size: 36px;
+	color: #616161;
+	/*font-weight: bold;*/
+}
+
+.close:hover, .close:focus {
+	color: #000;
+	background-color: #DEDEDE;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#tick-left {
+	float: left;
+	width: 36px;
+	height: 36px;
+	margin-right: 18px;
+}
+
+
+/* -------------------------By Raihan------------------------- */
+
+
+#auth{
+	font-weight: bold;
+	margin-left: 25px;
+}
+
+.divider{
+	float: left;
+	width: 75%;
+}
+
+.divided{
+	float: right;
+	width: 25%;
+}
+
+.userimg{
+	float: left;
+	width: 20%;
+	height: 50px;
+}
+
+.comm{
+	float: left;
+	width: 60%;
+	height: 50px;
+}
+
+.usrrate{
+	float: right;
+	width: 20%;
+	height: 50px;
+}
