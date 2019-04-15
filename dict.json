@@ -1,0 +1,300 @@
+{
+    "lelaki":{
+        "tag":"n",
+        "sinonim":[
+            "adam",
+            "laki-laki",
+            "lanang",
+            "maskulin",
+            "pria"
+        ]
+    },
+    "reformasi": {
+        "tag": "n", 
+        "sinonim": [
+            "pembaruan", 
+            "perbaikan", 
+            "perombakan", 
+            "restorasi"
+        ]
+    },
+    "tertarik": {
+        "tag": "v", 
+        "sinonim": [
+            "terbawa", 
+            "terdorong", 
+            "tergiring", 
+            "terikat", 
+            "terikut", 
+            "terjerat", 
+            "terjerumus", 
+            "terseret", 
+            "terbetot", 
+            "tercabut", 
+            "ki gandrung", 
+            "jatuh cinta", 
+            "kasmaran", 
+            "silau ", 
+            "terpikat", 
+            "terbujuk", 
+            "tercantol", 
+            "tergoda", 
+            "terhibur", 
+            "terkesan", 
+            "terpaut", 
+            "terpesona", 
+            "terpincut", 
+            "terpukau", 
+            "tertambat", 
+            "tertawan"
+        ]
+    }, 
+    "berani": {
+        "tag": "a", 
+        "sinonim": [
+            "bagak", 
+            "bahadur", 
+            "bahaduri", 
+            "dakar", 
+            "gagah", 
+            "jantan", 
+            "kesatria", 
+            "kosen", 
+            "nekat", 
+            "nyali"
+        ], 
+        "antonim": [
+            "takut"
+        ]
+    }, 
+    "ujian": {
+        "tag": "n", 
+        "sinonim": [
+            "eksamen", 
+            "kuis", 
+            "tentamen", 
+            "testing", 
+            "ulangan", 
+            "cobaan", 
+            "pukulan", 
+            "tamparan", 
+            "teguran"
+        ]
+    }, 
+    "materi": {
+        "tag": "n", 
+        "sinonim": [
+            "bakal", 
+            "benih", 
+            "bahan", 
+            "pelajaran", 
+            "subjek", 
+            "alamat", 
+            "bulan-bulanan ", 
+            "incaran", 
+            "objek", 
+            "sasaran", 
+            "target", 
+            "tujuan", 
+            "congkong", 
+            "pecahan kayu", 
+            "selumbar", 
+            "serpihan kayu", 
+            "suban", 
+            "tahi ketam", 
+            "tarahan kayu", 
+            "tatal", 
+            "bumbu", 
+            "ramuan", 
+            "resep"
+        ]
+    },
+    "mahasiswa": {
+        "tag": "n", 
+        "sinonim": [
+            "anak buah", 
+            "anak didik", 
+            "anak sasian", 
+            "cantrik", 
+            "cekel", 
+            "centerik", 
+            "murid", 
+            "mahasiswi", 
+            "pelajar", 
+            "pengikut", 
+            "penuntut", 
+            "siswa"
+        ], 
+        "antonim": [
+            "guru", 
+            "mursyid"
+        ]
+    }, 
+    "pelaksanaan": {
+        "tag": "n", 
+        "sinonim": [
+            "aktualisasi", 
+            "aplikasi", 
+            "implementasi", 
+            "konkretisasi", 
+            "manifestasi", 
+            "penerapan", 
+            "pengaktualan", 
+            "pengamalan", 
+            "pengejawantahan", 
+            "pengoperasian", 
+            "penjelmaan", 
+            "perwujudan", 
+            "praktik", 
+            "realisasi", 
+            "rekayasa"
+        ]
+    }, 
+    "aku": {
+        "tag": "pron", 
+        "sinonim": [
+            "abdi", 
+            "ai", 
+            "ajeh", 
+            "ambo", 
+            "ana ", 
+            "awak", 
+            "aye", 
+            "beta", 
+            "ego", 
+            "gua", 
+            "gue ", 
+            "hamba", 
+            "kawula", 
+            "patik", 
+            "sanda", 
+            "saya", 
+            "sini"
+        ]
+    }, 
+    "kamu": {
+        "tag": "pron", 
+        "sinonim": [
+            "anda", 
+            "anta", 
+            "awak", 
+            "encik", 
+            "engku", 
+            "ente", 
+            "engkau", 
+            "kau", 
+            "kena", 
+            "lu ", 
+            "pakanira", 
+            "saudara", 
+            "sira", 
+            "situ", 
+            "tuan"
+        ]
+    },
+    "nilai": {
+        "tag": "n", 
+        "sinonim": [
+            "angka", 
+            "biji", 
+            "harga", 
+            "harkat", 
+            "jumlah", 
+            "kadar", 
+            "karat", 
+            "kelas", 
+            "kualitas", 
+            "kuantitas", 
+            "kurs", 
+            "mutu", 
+            "perhitungan", 
+            "peringkat", 
+            "poin ", 
+            "ponten", 
+            "skala", 
+            "taksiran", 
+            "taraf", 
+            "timbangan", 
+            "tingkat", 
+            "ukuran"
+        ]
+    },   
+    "senang": {
+        "tag": "a", 
+        "sinonim": [
+            "aman", 
+            "bahagia", 
+            "bangga", 
+            "berbungabunga ", 
+            "berkenan", 
+            "bungah", 
+            "camar", 
+            "ceria", 
+            "doyan", 
+            "enak", 
+            "gemar", 
+            "gembira", 
+            "girang", 
+            "lapang dada", 
+            "lega", 
+            "makmur", 
+            "meriah", 
+            "nikmat", 
+            "nyaman", 
+            "puas", 
+            "ria", 
+            "riang", 
+            "sejahtera", 
+            "semarak", 
+            "selesa", 
+            "suka", 
+            "sukacita", 
+            "sukaria", 
+            "tenang", 
+            "tenteram"
+        ], 
+        "antonim": [
+            "sedih"
+        ]
+    }, 
+    "biaya": {
+        "tag": "n", 
+        "sinonim": [
+            "anggaran", 
+            "bayaran", 
+            "bea", 
+            "beban", 
+            "belanja", 
+            "dana", 
+            "imbalan", 
+            "kos", 
+            "ongkos", 
+            "pengeluaran", 
+            "upah"
+        ]
+    }, 
+    "pola": {
+        "tag": "n", 
+        "sinonim": [
+            "arketipe", 
+            "cermin", 
+            "contoh", 
+            "ideal", 
+            "model", 
+            "paradigma", 
+            "prototipe", 
+            "sablon", 
+            "corak", 
+            "desain", 
+            "figur", 
+            "motif", 
+            "ornamen", 
+            "patron", 
+            "ragam", 
+            "ragi", 
+            "warna", 
+            "organisasi", 
+            "sistem"
+        ]
+    }
+}
