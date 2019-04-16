@@ -25,7 +25,7 @@ def BM(T,P):
 	matched = False
 	i = m-1
 
-	if (m>n-1):
+	if (i>n-1):
 		return matched
 	else:
 
