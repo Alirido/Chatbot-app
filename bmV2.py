@@ -9,8 +9,12 @@ def bad_match_table(pattern):
 		if char not in table:
 			table[char]=[default-i-1]
 		else:
-			table[char]=[default-i-1]
+			if i != default-1:
+				table[char]=[default-i-1]
+			else:
+				table[char]=[default]
 		i+=1
+
 	return table
 	
 
@@ -31,7 +35,6 @@ def BM(T,P):
 
 		table = bad_match_table(P)
 		shift = 0
-		
 		last_index = m - 1
 
 		while shift <= n - m and not matched:
@@ -41,7 +44,6 @@ def BM(T,P):
 				num_matched_chars+=1
 				currpos-=1
 
-			
 			if currpos < 0:
 				matched =True
 				break
@@ -51,7 +53,11 @@ def BM(T,P):
 				if bad_char not in table:
 					safe_shift_1=m
 				else:
-					safe_shift_1=min(table[bad_char])
+						safe_shift_1=min(table[bad_char])
+						if safe_shift_1 ==0:
+							safe_shift_1=m
+						else:
+							safe_shift_1=min(table[bad_char])
 
 				shift+=safe_shift_1
 	
@@ -62,12 +68,11 @@ def BM(T,P):
 
 
 
-
-# T = input()
-# P = input()
+# # T = input()
+# # P = input()
 # print ("T  \t:",T)
 # print ("Pattern \t:",P)
-
+# bad_match_table(P)
 # found =BM(T,P)
 # print(found)
 
