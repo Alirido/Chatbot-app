@@ -30,7 +30,8 @@ def remove_ques(qa):
     with con:
         c.execute("DELETE from questions WHERE question =:question AND answer = :answer",{'question':qa.q,'answer':qa.a})
 
-# Create the questions (<question,answer>)       
+# Create the questions (<question,answer>)  
+'''    
 q1 = Questions('Apa kabar','Baik.. Anda?')
 q2 = Questions('Siapa nama anda','Nama saya xxx..Salam kenal')
 q3 = Questions('Bagaimana saya bisa menjadi mahasiswa di ITB','Mulai tahun 2011, ITB menggunakan SNMPTN dan SBMPTN untuk melaksanakan seleksi mahasiswa baru program sarjana di semua Fakultas dan Sekolah di ITB. Selain dari pelaksanaan SNMPTN dan SBMPTN tersebut, ITB tidak menerima mahasiswa baru program sarjana melalui jalur seleksi lain. Sebagai informasi, silakan mengunjungi laman resmi SNMPTN 2016 (http://snmptn.ac.id/) atau laman resmi SBMPTN 2016 (http://sbmptn.ac.id/) untuk memperoleh gambaran mengenai pelaksanaan pendaftaran dan seleksi mahasiswa baru di Perguruan Tinggi Negeri di Indonesia, termasuk ITB.')
@@ -40,10 +41,30 @@ q6 = Questions('Siapa saja yang boleh menjadi peserta SBMPTN ?','Peserta SBMPTN 
 q7 = Questions('Saya tidak memiliki nilai UN SLTA dan merupakan peserta Paket C. Namun demikian, pada saat pelaksanaan SBMPTN, nilai ujian Paket C yang saya ikuti belum terbit. Bisakah saya menjadi peserta SBMPTN ?','Peserta SBMPTN harus lulus dari Satuan Pendidikan dan Ujian Nasional SMA/MA/SMK/MAK atau yang setara dengan 3 tahun terakhir dan telah memiliki ijazah SMA/MA/SMK/MAK atau yang setara. Khusus bagi peserta Paket C, hanya dapat mengikuti SBMPTN bila telah memiliki Ijazah Paket C. Bila nilai Paket C belum terbit pada saat pelaksanaan SBMPTN tahun berjalan, silakan mengikuti SBMPTN pada tahun yang akan datang. Sebagai informasi pelaksanaan SBMPTN 2016, silakan mengunjungi laman resmi SBMPTN 2016 (http://sbmptn.ac.id/).')
 q8 = Questions('Saya berasal dari luar Jawa dan berminat memilih ITB pada pelaksanaan SBMPTN. Apakah saya harus mendaftarkan diri dan mengikuti ujian di Bandung ?','Sesuai dengan informasi di laman resmi SBMPTN (http://sbmptn.ac.id), tempat pelaksanaan ujian tidak menjadi pertimbangan pada kelulusan SBMPTN. Dengan demikian saudara dapat mendaftar dan mengikuti SBMPTN di lokasi terdekat dengan tempat domisili anda.')
 q9 = Questions('Materi apa saya yang diujikan pada pelaksanaan SBMPTN ?','SBMPTN terdiri atas kelompok ujian SAINTEK, kelompok ujian SOSHUM, dan kelompok ujian CAMPURAN (mengikuti ujian ujian SAINTEK dan SOSHUM). Informasi mengenai materi yang diujikan di masing-masing kelompok ujian dapat diperoleh di laman http://sbmptn.ac.id/.')
-q10 =Questions(' Bisakah saya mengikuti ujian lintas bidang pada pelaksanaan SBMPTN ?','Peserta SBMPTN akan mengikuti kelompok ujian berdasar fakultas/sekolah/program studi yang dipilihnya, tanpa memperhatikan bidang studi asal SMA. Sebagai contoh, siswa yang berasal dari SMA IPA dapat memilih SBM ITB (kelompok ujian SOSHUM) serta harus mengikuti ujian dengan materi kelompok SOSHUM. Demikian pula sebaliknya, siswa SMA yang berasal dari IPS dapat memilih FTMD ITB (kelompok ujian SAINTEK) serta harus mengikuti ujian dengan materi kelompok SAINTEK. Informasi selengkapnya dapat diperoleh di laman http://sbmptn.ac.id/.')
-q11=Questions('Apakah ITB membuka Program Peminatan pada pelaksanaan SBMPTN ?','Tidak, Program Peminatan ITB hanya ditawarkan pada pelaksanaan SNMPTN saja dan tidak dibuka pada pelaksanaan SBMPTN.')
+q10 = Questions(' Bisakah saya mengikuti ujian lintas bidang pada pelaksanaan SBMPTN ?','Peserta SBMPTN akan mengikuti kelompok ujian berdasar fakultas/sekolah/program studi yang dipilihnya, tanpa memperhatikan bidang studi asal SMA. Sebagai contoh, siswa yang berasal dari SMA IPA dapat memilih SBM ITB (kelompok ujian SOSHUM) serta harus mengikuti ujian dengan materi kelompok SOSHUM. Demikian pula sebaliknya, siswa SMA yang berasal dari IPS dapat memilih FTMD ITB (kelompok ujian SAINTEK) serta harus mengikuti ujian dengan materi kelompok SAINTEK. Informasi selengkapnya dapat diperoleh di laman http://sbmptn.ac.id/.')
+q11 = Questions('Apakah ITB membuka Program Peminatan pada pelaksanaan SBMPTN ?','Tidak, Program Peminatan ITB hanya ditawarkan pada pelaksanaan SNMPTN saja dan tidak dibuka pada pelaksanaan SBMPTN.')
+'''
 
-
+q1 = Questions('Siapa nama koordinator dosen mata kuliah strategi algoritma 2018/2019?', 'Rinaldi Munir')
+q2 = Questions('Siapa nama koordas strategi algoritma?', 'Kevin Andrian Liwinata')
+q3 = Questions('Berapa jumlah SKS minimal untuk lulus S1 di ITB?' , '144 SKS')
+q4 = Questions('Apa kepanjangan SKSD?', 'Sistem Komunikasi Satelit Domestik')
+q5 = Questions('Tanggal berapa diadakan pemilu tahun ini?', '17 April 2019')
+q6 = Questions ('Sudah berapa kali diadakan pemilu presiden?' , '4 Kali')
+q7 = Questions ('Pemilu diadakan berapa kali setahun?', '5 tahun sekali')
+q8 = Questions('Siapa saja pembuat anda?', 'Muhammad Ali Rido, Vania Velda, Edward Alexander Jaya')
+q9 = Questions('Apa saja stack yang dipakai untuk membuat anda?','<tuliskan stack yang dipakai>')
+q10 = Questions ('Apa nama ibukota Indonesia?' , 'DKI Jakarta')
+q11 = Questions ('Nama ibukota Indonesia sebelum disebut Jakarta adalah?' , 'Jayakarta')
+q12 = Questions ('Siapa pembuat algoritma KMP?', 'Knuth-Morris-Prat')
+q13 = Questions ('Siapa pemain catur nomor satu dunia sekarang?', 'Magnus Carlsen')
+q14 = Questions ('Apa nama blackhole yang berada di tengah galaksi bimasakti?','Blackhole M87')
+q15 = Questions ('Siapa nama pemain karakter wanita yang direbutkan oleh kedua pria dalam lagu "adu rayu"?','velove vexia')
+q16 = Questions ('Berapa jumlah presiden Indonesia?', 'Tujuh orang')
+q17 = Questions ('Tahun berapa Indonesia merdeka?', '1945')
+q18 = Questions('Berapa tahun Indonesia dijajah Jepang?' ,'3 setengah tahun')
+q19 = Questions('Dimana Soekarno memproklamasikan kemerdekaan Indonesia?','Jl. Pegangsaan Timur No.56')
+q20 = Questions('Dimana kantin terdekat Labtek 5?', 'Kantin Borju')
 
 
 #insert the questions
@@ -58,6 +79,15 @@ insert_q(q8)
 insert_q(q9)
 insert_q(q10)
 insert_q(q11)
+insert_q(q12)
+insert_q(q13)
+insert_q(q14)
+insert_q(q15)
+insert_q(q16)
+insert_q(q17)
+insert_q(q18)
+insert_q(q19)
+insert_q(q20)
 
 
 v = 'Bagaimana saya bisa menjadi mahasiswa di ITB'
@@ -70,5 +100,4 @@ print(jb)
 # c.fetchmany(x) # x = number of row, return x as list, if no return empty list
 # c.fetchall() # get the remaining row that are left and return as list
 con.commit()
-
 con.close()

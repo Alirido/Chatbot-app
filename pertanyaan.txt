@@ -1,20 +1,20 @@
-1. Siapa nama koordinator dosen mata kuliah strategi algoritma 2018/2019? Rinaldi Munir
-2. Siapa nama koordas strategi algoritma? Kevin Andrian Liwinata
-3. Berapa jumlah SKS minimal untuk lulus S1 di ITB? 144 SKS
-4. Apa kepanjangan SKSD? Sistem Komunikasi Satelit Domestik
-5. Tanggal berapa diadakan pemilu tahun ini? 17 April 2019
-6. Sudah berapa kali diadakan pemilu presiden? 4 Kali
-7. Pemilu diadakan berapa kali setahun? 5 tahun sekali
-8. Siapa saja pembuat anda? <tuliskan nama anggota kelompok>
-9. Apa saja stack yang dipakai untuk membuat anda? <tuliskan stack yang dipakai>
-10. Apa nama ibukota Indonesia? DKI Jakarta
-11. Nama ibukota Indonesia sebelum disebut Jakarta adalah? Jayakarta
-12. Siapa pembuat algoritma KMP? Knuth-Morris-Prat
-13. Siapa pemain catur nomor satu dunia sekarang? Magnus Carlsen
-14. Apa nama blackhole yang berada di tengah galaksi bimasakti? Blackhole M87
-15. Siapa nama pemain karakter wanita yang direbutkan oleh kedua pria dalam lagu "adu rayu"? velove vexia
-16. Berapa jumlah presiden Indonesia? Tujuh orang
-17. Tahun berapa Indonesia merdeka? 1945
-18. Berapa tahun Indonesia dijajah Jepang? 3 setengah tahun
-19. Dimana Soekarno memproklamasikan kemerdekaan Indonesia? Jl. Pegangsaan Timur No.56
-20. Dimana kantin terdekat Labtek 5? Kantin Borju
+Siapa nama koordinator dosen mata kuliah strategi algoritma 2018/2019?
+Siapa nama koordas strategi algoritma?
+Berapa jumlah SKS minimal untuk lulus S1 di ITB?
+Apa kepanjangan SKSD?
+Tanggal berapa diadakan pemilu tahun ini?
+Sudah berapa kali diadakan pemilu presiden?
+Pemilu diadakan berapa kali setahun?
+Siapa saja pembuat anda?
+Apa saja stack yang dipakai untuk membuat anda?
+Apa nama ibukota Indonesia?
+Nama ibukota Indonesia sebelum disebut Jakarta adalah?
+Siapa pembuat algoritma KMP?
+Siapa pemain catur nomor satu dunia sekarang?
+Apa nama blackhole yang berada di tengah galaksi bimasakti?
+Siapa nama pemain karakter wanita yang direbutkan oleh kedua pria dalam lagu "adu rayu"?
+Berapa jumlah presiden Indonesia?
+Tahun berapa Indonesia merdeka?
+Berapa tahun Indonesia dijajah Jepang?
+Dimana Soekarno memproklamasikan kemerdekaan Indonesia?
+Dimana kantin terdekat Labtek 5?

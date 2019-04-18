@@ -19,10 +19,6 @@ def bad_match_table(pattern):
 	
 
 
-
-
-
-
 def BM(T,P):
 	n = len(T)
 	m = len(P)
@@ -62,22 +58,5 @@ def BM(T,P):
 				shift+=safe_shift_1
 	
 	return matched
-
-
-
-
-
-
-# # T = input()
-# # P = input()
-# print ("T  \t:",T)
-# print ("Pattern \t:",P)
-# bad_match_table(P)
-# found =BM(T,P)
-# print(found)
-
-
-
-
 
 
