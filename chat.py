@@ -2,7 +2,7 @@
 #Program BACKEND untuk membaca pertanyaan dari file eksternal.
 # =============================================================
 
-import bmV2
+from bmV2 import BM
 from kmp_algo import KMP_algo
 from tesaurus import getSinonim
 
@@ -11,24 +11,24 @@ from tesaurus import getSinonim
 # =============================================================================
 def setConfValueSynonym(tipe, conf_value, question, input_user_byword, idx):
         #tipe = 1: KMP, tipe = 2: BoyerMoore, tipe = 3: Regex
-        if (tipe == 1):
-                #Cari by_word, yaitu kata perkata dari input_user_byword.
-                for byword in input_user_byword:
-                        conf_value_el_word = 0 ; conf_value_el_synonym = 0
-                        is_found_word = getAlgo(tipe,question,byword) #Panggil algo yang paling sesuai.
-                        #Ditemukan, maka conf_value diupdate.
-                        if (is_found_word != -1):
-                                conf_value_el_word =  min(len(byword),len(question))/ max(len(byword),len(question))
+       
+        #Cari by_word, yaitu kata perkata dari input_user_byword.
+        for byword in input_user_byword:
+                conf_value_el_word = 0 ; conf_value_el_synonym = 0
+                is_found_word = getAlgo(tipe,question,byword) #Panggil algo yang paling sesuai.
+                #Ditemukan, maka conf_value diupdate.
+                if (is_found_word != -1):
+                        conf_value_el_word =  min(len(byword),len(question))/ max(len(byword),len(question))
                         
-                        synonym_list = getSinonim(byword)
-                        for synonym in synonym_list:
-                                is_found_word = getAlgo(tipe,question,byword)
-                                #Ditemukan
-                                if (is_found_word != -1):
-                                        conf_value_el_synonym = max(min(len(synonym),len(question))/ max(len(synonym),len(question)),conf_value_el_synonym) 
+                synonym_list = getSinonim(byword)
+                for synonym in synonym_list:
+                        is_found_word = getAlgo(tipe,question,byword)
+                        #Ditemukan
+                        if (is_found_word != -1):
+                                conf_value_el_synonym = max(min(len(synonym),len(question))/ max(len(synonym),len(question)),conf_value_el_synonym) 
 
-                        #Bandingkan confidence value kata asli vs synonym, lalu update confidence value.
-                        conf_value[idx] = conf_value[idx] + max(conf_value_el_word, conf_value_el_synonym)
+                #Bandingkan confidence value kata asli vs synonym, lalu update confidence value.
+                conf_value[idx] = conf_value[idx] + max(conf_value_el_word, conf_value_el_synonym)
 
 
 # =============================================================================
@@ -37,6 +37,8 @@ def setConfValueSynonym(tipe, conf_value, question, input_user_byword, idx):
 def getAlgo(tipe, question, byword):
         if (tipe == 1):
                 return KMP_algo(max(question, byword), min (question,byword))
+        elif (tipe == 2):
+                return BM(max(question, byword), min (question,byword))
 
 
 # =============================================================================
@@ -69,25 +71,21 @@ for answer_line in file:
         db_answer.append(answer_line)
 file.close()
 
-input_user = input() #Dapatkan input user
+input_user = input('Masukkan pertanyaan yang Anda mau: ') #Dapatkan input user
 input_user = input_user.replace('?','') #Menghapus '?'
 input_user_byword = input_user.split() #Menghapus space dari pertanyaan yang diinput oleh user, menjadi list of words.
 input_user = input_user.replace(' ','')
-print(input_user_byword)
+tipe_algo = int(input('Ketik 1 untuk KMP, 2 untuk BM, dan 3 untuk Regex: '))
+#print(input_user_byword)
 
 # =============================================================================
 # Lanjutkan dengan string matching. Cari dengan KMP algorithm:
 # =============================================================================
 idx = 0
-#conf_value = dict.fromkeys([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20])
-
 conf_value = {key : 0 for key in [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]}
 
 for question in db_question:
-        if (len(question) > len(input_user)):
-                is_found = KMP_algo(question, input_user)
-        else:
-                is_found = KMP_algo(input_user, question)
+        is_found = getAlgo(tipe_algo, question, input_user)
         #Jika ditemukan
         if (is_found != -1):
                 #Kalau tingkat kecocokan di atas 90%
@@ -101,7 +99,7 @@ for question in db_question:
 idx = 0
 if (is_found == -1):
         for question in db_question:
-                setConfValueSynonym(1, conf_value, question, input_user_byword,idx)
+                setConfValueSynonym(tipe_algo, conf_value, question, input_user_byword,idx)
                 idx += 1
         #Mencari key yang memiliki nilai maksimum dari dictionary
         print(conf_value)

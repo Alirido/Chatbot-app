@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+.container {
+  width: 100vw;
+  padding-right: 1.5vw;
+  padding-left: 1.2vw;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: red;
+  display : flex;
+  flex-wrap : nowrap;
+  background-color: #454545;
+  height : 7vh;
+}
+
+.container2 {
+  height : 100vh;
+  width: 100vw;
+  background-color: #ffffff;
+}
+
+.container3 {
+  height : 50vh;
+  background-color: #ffffff;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  cursor : pointer;
+  background-color: #454545;
+  height: 3.5vh;
+  width: 9vw;
+  padding-left: 2.7vw;
+  padding-top: 0.5vw;
+}
+
+.button:hover {
+  background-color: #ffffff;
+}
+
+#buttontext {
+  font-family: 'Avenir Next LT Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir Next LT Pro Regular'), url('AvenirNextLTPro-Regular.woff') format('woff');
+  color: #ffffff;
+  font-size: 1.7vh;
+  letter-spacing: 0.2vw;
+
+}
+
+input[type=text], select {
+  width: 250%;
+  padding: 0.8vw 1vw;
+  margin-left : -6.5vw;
+  margin-top: 20vh;
+  display: inline-block;
+  border: 0.1vw solid #454545;
+  border-radius: 0.1vw;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  cursor : pointer;
+  background-color: #454545;
+  height: 3.5vh;
+  width: 9vw;
+  font-family: 'Avenir Next LT Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir Next LT Pro Regular'), url('AvenirNextLTPro-Regular.woff') format('woff');
+  color: #ffffff;
+  font-size: 1.7vh;
+  letter-spacing: 0.2vw;
+  border: none;
+  
+}
+
+input[type=submit]:hover{
+  background-color: #ffffff;
+}
+
+#buttontext:hover {
+  color: #454545;
+}
+
+#judul2 {
+  color : #ffffff;
+  letter-spacing: 0.1vw;
+  font-size: 1.5vh;
+  padding-left : 1.5vw;
+  position: element(#judul);
+  transform: translate(145%,49%);
+  font-family: 'Avenir Next LT Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir Next LT Pro Regular'), url('AvenirNextLTPro-Regular.woff') format('woff');
+}
+
+
+#judul {
+  color : #ffffff;
+  letter-spacing: 0.3vw;
+  font-size: 3vh;
+  padding-top: 0.01vh;
+  padding-left : 1.5vw;
+  position : absolute;
+  font-family: 'Avenir Next LT Pro Demi';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir Next LT Pro Demi'), url('AvenirNextLTPro-Demi.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro Demi';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir Next LT Pro Demi'), url('AvenirNextLTPro-Demi.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir Next LT Pro Regular'), url('AvenirNextLTPro-Regular.woff') format('woff');
+}
