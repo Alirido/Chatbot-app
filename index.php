@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+
+
 <html lang="en" dir="ltr">
   <head>
     <meta name = "viewport" content = "width=device-width", initial-scale = 1.0">
@@ -11,22 +14,26 @@
       <h1 id = "judul"> CHATBOT! </h1>
     </div>
 
+    <?php
+      if(isset($_POST["submit"])){
+      ?> 
+        <h1> <?php print $_POST['input']; ?> </h1>
+        <?php
+      } else {
+      }
+    ?>
+
     <div class = "container2">
         <div id = "wrapper">
-          <form action="action_page.php"  method = "post">
-              <input type="text" id= "inputp" name="input" placeholder="Ketik pertanyaan..">
+          <form  method = "post" action="" >
+              <input type="text" name="output" placeholder ="Ketik pertanyaan..">
+              <br>
+              <input type="text" name="input" placeholder ="Ketik pertanyaan..">
               <br></br>
               <input type="submit" name = "submit" value="CHAT">
           </form> 
         </div>
-      <!--
-        <div id = "wrapper">
-          <div class = "button">
-            <div id = buttontext> CHAT </div> 
-          </div>
-        </div>
-      -->
-        
+  
     </div>
 
   </body>
