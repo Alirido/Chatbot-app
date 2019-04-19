@@ -5,6 +5,10 @@
 from bmV2 import BM
 from kmp_algo import KMP_algo
 from tesaurus import getSinonim
+#from regex import Regex
+import re
+
+# global regexType
 
 # =============================================================================
 # Fungsi untuk mengatur confidence level pertanyaan dari sinonim maupun bukan.
@@ -40,6 +44,16 @@ def getAlgo(tipe, question, byword):
         elif (tipe == 2):
                 return BM(max(question, byword), min (question,byword))
 
+def Regex(Text,Pattern):
+        idx =0
+        regexType = input('Masukkan regex : ')
+        for ques in Text:
+                match = re.search(regexType,ques)
+                if (match !=None):
+                        print(db_answer[idx])
+                idx+=1
+
+
 
 # =============================================================================
 # PROGRAM UTAMA BERJALAN DARI SINI
@@ -71,12 +85,34 @@ for answer_line in file:
         db_answer.append(answer_line)
 file.close()
 
+
+file = open('stopword.txt', "r")  #Baca file eksternal stopword.txt
+ds = []
+
+# =============================================================================
+# Setiap stopwords dimasukkan ke dalam list stopwords
+# =============================================================================
+for ds_line in file:
+        ds_line = ds_line.strip()
+        ds.append(ds_line)
+file.close()
+
 input_user = input('Masukkan pertanyaan yang Anda mau: ') #Dapatkan input user
+for word in input_user: #delete stopword
+        if word in ds:
+                print("a")
+                input_user=input_user.replace(word,'')
 input_user = input_user.replace('?','') #Menghapus '?'
+
+
+
 input_user_byword = input_user.split() #Menghapus space dari pertanyaan yang diinput oleh user, menjadi list of words.
 input_user = input_user.replace(' ','')
+print(input_user)
 tipe_algo = int(input('Ketik 1 untuk KMP, 2 untuk BM, dan 3 untuk Regex: '))
 #print(input_user_byword)
+if (tipe_algo ==3):
+        Regex(db_question,input_user)
 
 # =============================================================================
 # Lanjutkan dengan string matching. Cari dengan KMP algorithm:
