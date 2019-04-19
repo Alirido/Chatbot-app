@@ -50,6 +50,7 @@ def Regex(Text,Pattern):
         for ques in Text:
                 match = re.search(regexType,ques)
                 if (match !=None):
+                        print(ques)
                         print(db_answer[idx])
                 idx+=1
 
