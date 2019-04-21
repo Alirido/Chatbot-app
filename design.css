@@ -27,6 +27,26 @@
   background-color: #ffffff;
 }
 
+.container4 {
+  padding-left: 2vw;
+  padding-top: 2vh;
+  resize: none;
+  overflow-y: scroll;
+  height: 30vh;
+  width: 50vw;
+  background-color: #ffffff;
+  border: 0.1vw solid #454545;
+  border-radius: 0.1vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vh;
+
+  font-family: 'Avenir Next LT Pro Demi';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir Next LT Pro Demi'), url('AvenirNextLTPro-Demi.woff') format('woff');
+}
+
 #wrapper {
   display: flex;
   justify-content: center;
@@ -64,6 +84,7 @@
   letter-spacing: 0.2vw;
 
 }
+
 
 input[type=text], select {
   width: 250%;
