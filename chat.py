@@ -54,9 +54,9 @@ def Regex(Text,Pattern):
         regexType = input('Masukkan regex : ')
         for ques in Text:
                 match = re.search(regexType,ques)
-                print(match)
+                # print(match)
                 if (match !=None):
-                        print(match.group())
+                        # print(match.group())
                         hasil.append(ques)
                         print(db_answer[idx])
                 idx+=1
