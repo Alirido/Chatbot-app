@@ -27,7 +27,10 @@ def KMP_algo(text, pattern):
 def computeFunc(pattern):
     pattern_len = len(pattern)
     func = [None] * pattern_len
-    func[0] = 0 #sudah pasti 0
+    try:
+        func[0] = 0 #sudah pasti 0
+    except (IndexError):
+        print("?")
 
     #Hitung func untuk indeks >=1
     j = 0 ; func_idx = 1

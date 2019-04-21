@@ -40,19 +40,28 @@ def setConfValueSynonym(tipe, conf_value, question, input_user_byword, idx):
 # =============================================================================
 def getAlgo(tipe, question, byword):
         if (tipe == 1):
-                return KMP_algo(max(question, byword), min (question,byword))
+                try:
+                        return KMP_algo(max(question, byword), min (question,byword))
+                except (IndexError):
+                        print('???')
+                        # break
         elif (tipe == 2):
                 return BM(max(question, byword), min (question,byword))
 
 def Regex(Text,Pattern):
+        hasil =[]
         idx =0
         regexType = input('Masukkan regex : ')
         for ques in Text:
                 match = re.search(regexType,ques)
+                print(match)
                 if (match !=None):
-                        print(ques)
+                        print(match.group())
+                        hasil.append(ques)
                         print(db_answer[idx])
                 idx+=1
+        for a in hasil:
+                print(a)
 
 
 
@@ -100,6 +109,7 @@ file.close()
 
 input_user = input('Masukkan pertanyaan yang Anda mau: ') #Dapatkan input user
 for word in input_user: #delete stopword
+        print(word)
         if word in ds:
                 print("a")
                 input_user=input_user.replace(word,'')
@@ -126,9 +136,13 @@ for question in db_question:
         #Jika ditemukan
         if (is_found != -1):
                 #Kalau tingkat kecocokan di atas 90%
-                if ((len(input_user) / len(question) >= 0.9)):
-                        print(db_answer[idx])
-                        break
+                try:
+                        if ((len(input_user) / len(question) >= 0.9)):
+                                print(db_answer[idx])
+                                break
+                except(ZeroDivisionError):
+                        print("I don't understand")
+                
                             
         idx += 1
 
