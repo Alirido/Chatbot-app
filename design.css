@@ -45,6 +45,15 @@
   background-color: #ffffff;
 }
 
+.gif {
+  display :inline-block;
+  margin-left: 325px;
+  margin-right: 725px;
+  width: 550px;
+  height: 400px;
+  margin-top: 50px;
+}
+
 #buttontext {
   font-family: 'Avenir Next LT Pro Regular';
   font-style: normal;
