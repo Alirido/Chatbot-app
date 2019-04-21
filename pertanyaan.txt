@@ -19,9 +19,9 @@ Berapa tahun Indonesia dijajah Jepang?
 Dimana Soekarno memproklamasikan kemerdekaan Indonesia?
 Dimana kantin terdekat Labtek 5?
 Halo apa kabar?
-Siapa namamu
-Baik juga
-Kurang baik
+Siapa namamu?
+Baik juga?
+Kurang baik?
 Ada berapa tugas besar pada minggu ini?
 Anda memilih pasangan presiden nomor urut berapa?
 Berapa banyak kucing di ITB?
@@ -35,5 +35,3 @@ Apa warna bendera Indonesia?
 Siapa pencipta lagu Indonesia Raya?
 Dimanakah kamu tinggal?
 Siapa tokoh emansipasi wanita?
-
-

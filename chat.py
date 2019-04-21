@@ -69,61 +69,79 @@ def Regex(Text,Pattern):
 # PROGRAM UTAMA BERJALAN DARI SINI
 # =============================================================================
         
-file= open('pertanyaan.txt',"r") #Baca file eksternal pertanyaan.txt
+
 db_question = []
+ds = []
+
+
+# ==================================================================================
+# Setiap stopwords dimasukkan ke dalam list stopwords, ds adalah database stopwords.
+# ==================================================================================
+file = open('stopword.txt', "r")  #Baca file eksternal stopword.txt
+for ds_line in file:
+        ds_line = ds_line.strip()
+        ds.append(ds_line)
+file.close()
+
 
 # =============================================================================
 #Setiap pertanyaan dimasukkan ke dalam list pertanyaan (db_question : database)
 # =============================================================================
+file= open('pertanyaan.txt',"r") #Baca file eksternal pertanyaan.txt
 for question_line in file:
+        #Konversi semua huruf menjadi huruf kecil.
+        question_line = question_line.lower()
+        #Split setiap string menjadi list of string.
+        ql_word = question_line.split()
+        
+        #Mulai prosedur penghapusan:
+        for s_word in ds:
+                if (s_word in ql_word):
+                        ql_word.remove(s_word) 
+        separator = ' '
+        question_line = separator.join(ql_word)
+
+                                        
         question_line = question_line.replace(' ','') #Hapus semua space
         question_line = question_line.replace('?','') #Hapus semua question mark
         question_line = question_line.strip() #Hapus'\n'
         db_question.append(question_line)
 file.close()
-#print(db_question)
 
 
-file = open('jawaban.txt', "r")  #Baca file eksternal jawaban.txt
-db_answer = []
 
 # =============================================================================
 # Setiap jawaban dimasukkan ke dalam list jawaban (db_answer: database)
 # =============================================================================
+file = open('jawaban.txt', "r")  #Baca file eksternal jawaban.txt
+db_answer = []
 for answer_line in file:
         answer_line = answer_line.strip()
         db_answer.append(answer_line)
 file.close()
 
 
-file = open('stopword.txt', "r")  #Baca file eksternal stopword.txt
-ds = []
-
-# =============================================================================
-# Setiap stopwords dimasukkan ke dalam list stopwords
-# =============================================================================
-for ds_line in file:
-        ds_line = ds_line.strip()
-        ds.append(ds_line)
-file.close()
-
 input_user = input('Masukkan pertanyaan yang Anda mau: ') #Dapatkan input user
-for word in input_user: #delete stopword
-        print(word)
-        if word in ds:
-                print("a")
-                input_user=input_user.replace(word,'')
+input_user = input_user.lower()
+input_user_word = input_user.split()
+
+#Mulai prosedur penghapusan:
+for s_word in ds:
+        if (s_word in input_user_word):
+                 input_user_word.remove(s_word) 
+separator = ' '
+input_user = separator.join(input_user_word)
 input_user = input_user.replace('?','') #Menghapus '?'
-
-
-
 input_user_byword = input_user.split() #Menghapus space dari pertanyaan yang diinput oleh user, menjadi list of words.
 input_user = input_user.replace(' ','')
-print(input_user)
+
+print('Pertanyaan Anda: ', input_user)
+
 tipe_algo = int(input('Ketik 1 untuk KMP, 2 untuk BM, dan 3 untuk Regex: '))
-#print(input_user_byword)
-if (tipe_algo ==3):
+
+if (tipe_algo == 3):
         Regex(db_question,input_user)
+
 
 # =============================================================================
 # Lanjutkan dengan string matching. Cari dengan KMP algorithm:
