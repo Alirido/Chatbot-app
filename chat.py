@@ -9,7 +9,6 @@ from tesaurus import getSinonim
 import re
 
 # global regexType
-
 # =============================================================================
 # Fungsi untuk mengatur confidence level pertanyaan dari sinonim maupun bukan.
 # =============================================================================
@@ -142,12 +141,11 @@ tipe_algo = int(input('Ketik 1 untuk KMP, 2 untuk BM, dan 3 untuk Regex: '))
 if (tipe_algo == 3):
         Regex(db_question,input_user)
 
-
 # =============================================================================
 # Lanjutkan dengan string matching. Cari dengan KMP algorithm:
 # =============================================================================
 idx = 0
-conf_value = {key : 0 for key in [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]}
+conf_value = {key : 0 for key in [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36]}
 
 for question in db_question:
         is_found = getAlgo(tipe_algo, question, input_user)
@@ -160,8 +158,7 @@ for question in db_question:
                                 break
                 except(ZeroDivisionError):
                         print("I don't understand")
-                
-                            
+                               
         idx += 1
 
 #Jika tidak ditemukan

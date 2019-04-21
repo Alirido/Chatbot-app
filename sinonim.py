@@ -18,4 +18,4 @@ def getSinonim(word):
 
 
 
-print (getSinonim('pola'))
+print (getSinonim('terhampir'))
