@@ -47,25 +47,20 @@ def getAlgo(tipe, question, byword):
         elif (tipe == "BM"):
                 return BM(max(question, byword), min (question,byword))
 
-
-def Regex(Text,Pattern,db_answer, db_question_true):
-        separator ="\n"
-        str = ''
+def Regex(Text,Pattern):
         hasil =[]
         idx =0
-        # regexType = input('Masukkan regex : ')
+        regexType = input('Masukkan regex : ')
         for ques in Text:
-                match = re.search(Pattern,ques)
-                #print(match)
+                match = re.search(regexType,ques)
+                # print(match)
                 if (match !=None):
-                        hasil.append(db_question_true[idx])
-                        hasil.append(db_answer[idx])
-                        str = separator.join(hasil)
-                        # print(hasil)
-                      
+                        # print(match.group())
+                        hasil.append(ques)
+                        return(db_answer[idx])
                 idx+=1
-        return(str)
-
+        for a in hasil:
+                return(a)
 
 
 def chatBotBackEnd(tipe, masuk):
@@ -73,7 +68,6 @@ def chatBotBackEnd(tipe, masuk):
         # PROGRAM UTAMA BERJALAN DARI SINI
         # =============================================================================
         db_question = []
-        db_question_true = []
         ds = []
         # ==================================================================================
         # Setiap stopwords dimasukkan ke dalam list stopwords, ds adalah database stopwords.
@@ -90,8 +84,6 @@ def chatBotBackEnd(tipe, masuk):
         # =============================================================================
         file= open('pertanyaan.txt',"r") #Baca file eksternal pertanyaan.txt
         for question_line in file:
-                question_line_temp = question_line.strip()
-                db_question_true.append(question_line_temp)
                 #Konversi semua huruf menjadi huruf kecil.
                 question_line = question_line.lower()
                 #Split setiap string menjadi list of string.
@@ -140,12 +132,10 @@ def chatBotBackEnd(tipe, masuk):
 
         #print('Pertanyaan Anda: ', input_user)
 
-        tipe_algo = tipe
+        tipe_algo = tipe #int(input('Ketik 1 untuk KMP, 2 untuk BM, dan 3 untuk Regex: '))
 
         if (tipe_algo == "REGEX"):
-                #return(db_question_true)
-                str_a = Regex(db_question,input_user,db_answer,db_question_true)
-                return(str_a)
+                Regex(db_question,input_user)
 
         # =============================================================================
         # Lanjutkan dengan string matching. Cari dengan KMP algorithm:
@@ -184,4 +174,4 @@ def chatBotBackEnd(tipe, masuk):
 
 
 if __name__==  "__main__":
-      print (chatBotBackEnd(sys.argv[1], sys.argv[2]))
+    print (chatBotBackEnd(sys.argv[1], sys.argv[2]))

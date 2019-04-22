@@ -9,8 +9,13 @@
 
     <div class = "container">
       <h1 id = "judul"> CHATBOT! </h1>
-      <div id="wrap">
+      
     </div>
+
+
+
+    <div id="wrap">
+      <img class="gif" src="i7s.gif" width="709" height="425" />
     </div>
 
     <div class = "container4">

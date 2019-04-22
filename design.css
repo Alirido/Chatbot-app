@@ -30,9 +30,10 @@
 .container4 {
   padding-left: 2vw;
   padding-top: 2vh;
+  padding-bottom: 2vh;
   resize: none;
   overflow-y: scroll;
-  height: 30vh;
+  height: 25vh;
   width: 50vw;
   background-color: #ffffff;
   border: 0.1vw solid #454545;
@@ -47,9 +48,20 @@
   src: local('Avenir Next LT Pro Demi'), url('AvenirNextLTPro-Demi.woff') format('woff');
 }
 
+.gif {
+  border-radius: 10vw;
+}
+
 #wrapper {
   display: flex;
   justify-content: center;
+  margin-left : auto;
+  margin-right : auto;
+}
+
+#wrap {
+  display: flex;
+  padding-left : 20vw;
 }
 
 .button {
@@ -69,8 +81,8 @@
   display :inline-block;
   margin-left: 325px;
   margin-right: 725px;
-  width: 550px;
-  height: 400px;
+  width: 250px;
+  height: 200px;
   margin-top: 50px;
 }
 
@@ -120,20 +132,6 @@ input[type=submit]:hover{
 #buttontext:hover {
   color: #454545;
 }
-
-#judul2 {
-  color : #ffffff;
-  letter-spacing: 0.1vw;
-  font-size: 1.5vh;
-  padding-left : 1.5vw;
-  position: element(#judul);
-  transform: translate(145%,49%);
-  font-family: 'Avenir Next LT Pro Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Avenir Next LT Pro Regular'), url('AvenirNextLTPro-Regular.woff') format('woff');
-}
-
 
 #judul {
   color : #ffffff;
