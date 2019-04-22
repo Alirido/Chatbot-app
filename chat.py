@@ -48,19 +48,22 @@ def getAlgo(tipe, question, byword):
                 return BM(max(question, byword), min (question,byword))
 
 def Regex(Text,Pattern):
+        separator ="\n"
         hasil =[]
         idx =0
         # regexType = input('Masukkan regex : ')
         for ques in Text:
                 match = re.search(Pattern,ques)
-                # print(match)
+                #print(match)
                 if (match !=None):
-                        # print(match.group())
                         hasil.append(ques)
-                        return(db_answer[idx])
+                        hasil.append(db_answer[idx])
+                        str = separator.join(hasil)
+                        # print(hasil)
+                      
                 idx+=1
-        for a in hasil:
-                return(a)
+        return(str)
+
 
 
 def chatBotBackEnd(tipe, masuk):
@@ -135,7 +138,7 @@ def chatBotBackEnd(tipe, masuk):
         tipe_algo = int(input('Ketik 1 untuk KMP, 2 untuk BM, dan 3 untuk Regex: '))
 
         if (tipe_algo == "REGEX"):
-                Regex(db_question,input_user)
+                str = Regex(db_question,input_user)
 
         # =============================================================================
         # Lanjutkan dengan string matching. Cari dengan KMP algorithm:
