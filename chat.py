@@ -50,9 +50,9 @@ def getAlgo(tipe, question, byword):
 def Regex(Text,Pattern):
         hasil =[]
         idx =0
-        regexType = input('Masukkan regex : ')
+        # regexType = input('Masukkan regex : ')
         for ques in Text:
-                match = re.search(regexType,ques)
+                match = re.search(Pattern,ques)
                 # print(match)
                 if (match !=None):
                         # print(match.group())
@@ -132,7 +132,7 @@ def chatBotBackEnd(tipe, masuk):
 
         #print('Pertanyaan Anda: ', input_user)
 
-        tipe_algo = tipe #int(input('Ketik 1 untuk KMP, 2 untuk BM, dan 3 untuk Regex: '))
+        tipe_algo = int(input('Ketik 1 untuk KMP, 2 untuk BM, dan 3 untuk Regex: '))
 
         if (tipe_algo == "REGEX"):
                 Regex(db_question,input_user)
